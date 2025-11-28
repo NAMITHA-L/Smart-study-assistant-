@@ -1,137 +1,182 @@
-🌟 Smart Study Assistant — AI-Powered Exam Prep (Agentic AI)
-<div align="center"> <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" /> </div>
+SMART STUDY ASSISTANT – README + COMPONENT CODES
 
-Transform textbooks, slides, and notes into summaries, MCQs, Q&A, and study schedules using an Agentic AI Pipeline powered by Gemini 2.0 Flash.
+========================================
+README.md (Copy-Paste Ready)
+========================================
 
-<p align="center"> <img src="https://img.shields.io/badge/AI-Agentic%20Pipeline-purple?style=flat&logo=sparkles" /> <img src="https://img.shields.io/badge/Built%20With-React%20%2B%20Vite-blue?style=flat&logo=react" /> <img src="https://img.shields.io/badge/Charts-Bar%20%2F%20Pie-green?style=flat&logo=chartdotjs" /> <img src="https://img.shields.io/badge/License-MIT-green" /> </p>
-📖 Table of Contents
+<div align="center">
+  <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-Overview
+# ✨ Smart Study Assistant — AI-Powered Exam Prep (Agentic AI)
 
-Features
+Transform textbooks, slides & notes into summaries, MCQs, Q&A, and study schedules using an Agentic AI Pipeline powered by Gemini 2.0 Flash.
 
-Demo
+---
 
-Tech Stack
+# CODE FILES INCLUDED
+- AnimatedHero.tsx
+- BarPieCharts.tsx
+- Timetable.tsx
+- SampleStyles.css
+- App.tsx
 
-Run Locally
+========================================
+AnimatedHero.tsx
+========================================
+import React from "react";
 
-Components (Charts, Timetable, Hero Section)
+export default function AnimatedHero() {
+  return (
+    <section className="w-full py-16 bg-gradient-to-r from-indigo-50 to-white hero-float">
+      <div className="max-w-4xl mx-auto px-6 text-center">
+        <h1 className="text-5xl font-extrabold mb-4">
+          Smart Study Assistant <span className="text-indigo-600">✨</span>
+        </h1>
+        <p className="text-gray-600 text-lg mb-8">
+          Upload notes, slides or textbooks and get instant summaries, MCQs & study plans.
+        </p>
+        <div className="flex justify-center gap-4">
+          <button className="px-6 py-3 rounded-xl bg-indigo-600 text-white font-medium shadow-lg hover:-translate-y-1 transition">
+            Upload Document
+          </button>
+          <button className="px-6 py-3 rounded-xl border border-indigo-300 text-indigo-600 font-medium">
+            Try Demo
+          </button>
+        </div>
+        <p className="mt-8 text-sm text-gray-500">
+          Agentic Processing • Chunking • Gemini 2.0 Flash
+        </p>
+      </div>
+    </section>
+  );
+}
 
-Contributing
+========================================
+BarPieCharts.tsx
+========================================
+import React from "react";
+import { Bar, Pie } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  BarElement,
+  CategoryScale,
+  LinearScale,
+  ArcElement,
+  Tooltip,
+  Legend,
+} from "chart.js";
 
-License
+ChartJS.register(BarElement, CategoryScale, LinearScale, ArcElement, Tooltip, Legend);
 
-✨ Overview
+export default function BarPieCharts({ mcqStats }: any) {
+  const barData = {
+    labels: mcqStats?.topics ?? ["Arrays", "Trees", "Graphs", "DP"],
+    datasets: [
+      {
+        label: "Questions per Topic",
+        data: mcqStats?.counts ?? [5, 3, 4, 2],
+        backgroundColor: "rgba(79,70,229,0.8)",
+      },
+    ],
+  };
 
-The Smart Study Assistant automatically converts study materials (PDF, PPTX, DOCX, images, text) into structured outputs.
+  const pieData = {
+    labels: ["Easy", "Medium", "Hard"],
+    datasets: [
+      {
+        data: [50, 35, 15],
+        backgroundColor: ["#60A5FA", "#7C3AED", "#F97316"],
+      },
+    ],
+  };
 
-It performs:
-✔ OCR & text extraction
-✔ Cleaning & normalization
-✔ Chunking & embeddings
-✔ Agentic processing via Gemini 2.0 Flash
-✔ Output of structured JSON (summary, MCQs, short answers, formulas)
+  return (
+    <div className="grid md:grid-cols-2 gap-8 p-6">
+      <div className="bg-white p-6 rounded-xl shadow card-hover">
+        <h3 className="font-semibold mb-4 text-lg">Questions by Topic</h3>
+        <Bar data={barData} />
+      </div>
+      <div className="bg-white p-6 rounded-xl shadow card-hover">
+        <h3 className="font-semibold mb-4 text-lg">Difficulty Distribution</h3>
+        <Pie data={pieData} />
+      </div>
+    </div>
+  );
+}
 
-The frontend includes modern animations, chart visualizations, and an interactive study timetable.
+========================================
+Timetable.tsx
+========================================
+import React from "react";
 
-🎯 Features
+type Slot = { day: string; time: string; topic: string };
 
-Upload PDFs, DOCX, PPTX, images
+const defaultSlots: Slot[] = [
+  { day: "Mon", time: "6–7 PM", topic: "Arrays" },
+  { day: "Tue", time: "6–7 PM", topic: "Graphs" },
+  { day: "Wed", time: "6–7 PM", topic: "DP" },
+  { day: "Thu", time: "6–7 PM", topic: "Trees" },
+];
 
-OCR and text cleaning
+export default function Timetable({ slots = defaultSlots }: { slots?: Slot[] }) {
+  return (
+    <div className="p-6 bg-white rounded-xl shadow card-hover">
+      <h3 className="text-lg font-semibold mb-4">Study Timetable</h3>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {slots.map((s, i) => (
+          <div key={i} className="p-4 border rounded-lg text-center hover:shadow-md transition">
+            <div className="font-semibold">{s.day}</div>
+            <div className="text-sm text-gray-500">{s.time}</div>
+            <div className="mt-2 text-indigo-600 font-semibold">{s.topic}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
-Agentic chunk processing
+========================================
+SampleStyles.css
+========================================
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
 
-AI-generated summaries, MCQs, short answers
+.hero-float {
+  animation: float 3s ease-in-out infinite;
+}
 
-Chart analytics (bar + pie)
+.card-hover {
+  transition: transform .18s ease, box-shadow .18s ease;
+}
 
-Beautiful animated UI
+.card-hover:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(12,12,12,0.1);
+}
 
-Timetable generator
+========================================
+App.tsx
+========================================
+import React from "react";
+import AnimatedHero from "./components/AnimatedHero";
+import BarPieCharts from "./components/BarPieCharts";
+import Timetable from "./components/Timetable";
+import "./SampleStyles.css";
 
-Export to PDF/CSV
+export default function App() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <AnimatedHero />
+      <main className="max-w-6xl mx-auto py-12">
+        <BarPieCharts />
+        <div className="my-10" />
+        <Timetable />
+      </main>
+    </div>
+  );
+}
 
-Optional backend for secure API calls
-
-🎛️ Demo
-
-View your app in AI Studio:
-https://ai.studio/apps/drive/1_MXio3Rng0yzlbmzEYftP9j1JQzmqwH2
-
-(You can optionally add GIFs or screenshots here)
-
-⚙️ Tech Stack
-
-React + TypeScript + Vite
-
-Tailwind CSS
-
-React-ChartJS-2 + Chart.js
-
-Google Gemini 2.0 Flash (API)
-
-🧑‍💻 Run Locally
-1. Clone Repository
-git clone https://github.com/YOUR-USERNAME/smart-study-assistant.git
-cd smart-study-assistant
-
-2. Install Dependencies
-npm install
-
-3. Create .env.local
-VITE_GEMINI_API_KEY=your_gemini_api_key_here
-
-4. Start Development Server
-npm run dev
-
-
-Your app runs at:
-http://localhost:5173
-
-🧩 Components Included (Add these inside src/components/)
-
-✨ Animated Hero Section
-✨ Bar Chart + Pie Chart
-✨ Study Timetable
-✨ Custom CSS animations
-
-You can import all components directly into:
-
-src/App.tsx
-
-
-These components make your UI look premium and professional.
-
-📦 Charts & Timetable Dependencies
-
-Install chart libraries:
-
-npm install chart.js react-chartjs-2
-
-
-Install Tailwind (optional):
-
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-
-🔒 API Security Notes
-
-Never commit .env.local
-
-Always hide your API key
-
-For production, use backend routes to securely call Gemini API
-
-🤝 Contributing
-
-Fork this repo
-
-Create a branch: feature/my-feature
-
-Commit & push
-
-Open a Pull Request
-
-Follow the existing coding style when adding new features.
