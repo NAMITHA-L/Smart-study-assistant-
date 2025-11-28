@@ -1,4 +1,4 @@
-Markdown
+
 <div align="center">
   <a href="#ignition">
     <img src="https://img.shields.io/badge/Status-Actively%20Developed-blue?style=for-the-badge&logo=github" alt="Development Status"/>
@@ -7,7 +7,6 @@ Markdown
     <img src="https://img.shields.io/badge/AI%20Core-Gemini%20Flash-8E75B2?style=for-the-badge&logo=google%20gemini&logoColor=white" alt="Gemini Core">
     <img src="https://img.shields.io/badge/Built%20With-React%20%2B%20Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
   </a>
-  <img src="https://img.shields.io/github/stars/your-username/smart-study-assistant?style=for-the-badge&color=f4d03f&label=Stars&logo=github" alt="GitHub stars">
 </div>
 
 <br>
@@ -100,16 +99,26 @@ src/
 Get the engine running in 3 steps.
 
 ## 1.Clone the Repository
-
-
 git clone [https://github.com/your-username/smart-study-assistant.git](https://github.com/your-username/smart-study-assistant.git)
 cd smart-study-assistant
+
 ## 2.Fuel Up (Environment) Create a .env.local file in the root directory and paste your Gemini Key:
-
 VITE_GEMINI_API_KEY=AIzaSy...
+
 ## 3.Launch the Dev Server
-
-
 npm install
 npm run dev
 Your app runs at: http://localhost:3000
+
+## 🤝 Contributing
+
+We welcome contributions! If you have ideas for new features, improvements, or bug fixes, please follow these steps:
+
+1.  **Fork** the repository.
+2.  **Create** a new branch (`git checkout -b feature/your-feature-name`).
+3.  **Commit** your changes (`git commit -m 'feat: Add amazing feature'`).
+4.  **Push** to the branch (`git push origin feature/your-feature-name`).
+5.  **Open a Pull Request**.
+
+---
+<p align="center"> <hr /> <sub>Built with 🖤 and ☕ by ## NAMITHA.L </sub> </p>
