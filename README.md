@@ -1,102 +1,169 @@
-// AnimatedHero.tsx
-import React from "react";
-export default function AnimatedHero() {
-  return (
-    <section className="w-full py-12 bg-gradient-to-r from-sky-50 to-white">
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <h1 className="text-4xl font-extrabold mb-3">
-          Smart Study Assistant <span className="text-indigo-600">✨</span>
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Upload notes, slides or textbooks and get instant summaries, MCQs & study plans.
-        </p>
-        <div className="inline-flex gap-3">
-          <button className="px-5 py-3 rounded-lg bg-indigo-600 text-white shadow-md">
-            Upload Document
-          </button>
-          <button className="px-5 py-3 rounded-lg border border-indigo-300 text-indigo-600">
-            Try Demo
-          </button>
-        </div>
-      </div>
-    </section>
-  );
-}
+<div align="center">
+  <br />
+    <a href="https://github.com/your-username/smart-study-assistant">
+    <img src="https://img.shields.io/badge/Gemini%202.0-Flash-8E75B2?style=for-the-badge&logo=google%20gemini&logoColor=white" alt="Gemini">
+    <img src="https://img.shields.io/badge/React-v18-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
+  </a>
+  <br />
+  <br />
 
-// BarPieCharts.tsx
-import React from "react";
-import { Bar, Pie } from "react-chartjs-2";
-import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, ArcElement, Tooltip, Legend } from "chart.js";
-ChartJS.register(BarElement, CategoryScale, LinearScale, ArcElement, Tooltip, Legend);
-export default function BarPieCharts({ mcqStats = { topics: [], counts: [] } }) {
-  const barData = {
-    labels: mcqStats.topics.length ? mcqStats.topics : ["Arrays","Trees","Graphs","DP"],
-    datasets: [{ label: "Questions per Topic", data: mcqStats.counts.length ? mcqStats.counts : [5,3,4,2], backgroundColor: "rgba(79,70,229,0.8)" }]
-  };
-  const pieData = {
-    labels: ["Easy","Medium","Hard"],
-    datasets: [{ data: [50,35,15], backgroundColor: ["#60A5FA","#7C3AED","#F97316"] }]
-  };
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold mb-2">Questions by Topic</h3>
-        <Bar data={barData} />
-      </div>
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold mb-2">Difficulty Distribution</h3>
-        <Pie data={pieData} />
-      </div>
-    </div>
-  );
-}
+  <h1 align="center" style="font-size: 3rem; font-weight: 900;">⚡ Smart Study Assistant</h1>
+  
+  <p align="center" style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+    <b>The "Second Brain" for Students.</b><br>
+    An Agentic AI pipeline that transforms chaos into structure. <br>
+    Upload raw notes. Get a perfect study plan.
+  </p>
 
-// Timetable.tsx
-import React from "react";
-const defaultSlots = [
-  { day: "Mon", time: "6-7pm", topic: "Arrays" },
-  { day: "Tue", time: "6-7pm", topic: "Graphs" },
-  { day: "Wed", time: "6-7pm", topic: "DP" },
-  { day: "Thu", time: "6-7pm", topic: "Trees" }
-];
-export default function Timetable({ slots = defaultSlots }) {
-  return (
-    <div className="p-6 bg-white rounded shadow">
-      <h3 className="text-lg font-semibold mb-4">Study Timetable</h3>
-      <div className="grid grid-cols-4 gap-3">
-        {slots.map((s, i) => (
-          <div key={i} className="p-3 border rounded-lg">
-            <div className="font-medium">{s.day}</div>
-            <div className="text-sm text-gray-500">{s.time}</div>
-            <div className="mt-2 text-indigo-600 font-semibold">{s.topic}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+  <br />
+</div>
 
-// SampleStyles.css
-@keyframes float { 0% { transform: translateY(0px) } 50% { transform: translateY(-6px) } 100% { transform: translateY(0px) } }
-.hero-float { animation: float 3s ease-in-out infinite; }
-.card-hover { transition: transform .18s ease, box-shadow .18s ease; }
-.card-hover:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 8px 24px rgba(12,12,12,0.1); }
+## 🍱 What's Inside?
 
-// App.tsx
-import React from "react";
-import AnimatedHero from "./components/AnimatedHero";
-import BarPieCharts from "./components/BarPieCharts";
-import Timetable from "./components/Timetable";
-import "./SampleStyles.css";
-export default function App() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <AnimatedHero />
-      <main className="max-w-6xl mx-auto py-8">
-        <BarPieCharts />
-        <div className="my-6" />
-        <Timetable />
-      </main>
-    </div>
-  );
-}
+<table>
+  <tr>
+    <td width="60%" valign="top">
+      <h3>🤖 Agentic Reasoning</h3>
+      <p>Unlike basic wrappers, this uses a <b>multi-step agentic pipeline</b>. It reads your PDF, understands the semantic structure, and decides which topics need deep summaries vs. quick bullet points.</p>
+      <br>
+      <img src="https://img.shields.io/badge/Powered_By-Gemini_Flash-purple" />
+    </td>
+    <td width="40%" valign="top">
+      <h3>📊 Visual Analytics</h3>
+      <p>Stop guessing your progress.</p>
+      <ul>
+        <li><b>Bar Charts:</b> Topic frequency analysis.</li>
+        <li><b>Pie Charts:</b> Difficulty distribution (Easy/Med/Hard).</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="40%" valign="top">
+      <h3>📅 Dynamic Timetables</h3>
+      <p>The AI calculates your exam date proximity and generates a <b>slot-based JSON schedule</b> rendered into a beautiful React grid.</p>
+    </td>
+    <td width="60%" valign="top">
+      <h3>⚡ The Tech Stack</h3>
+      <br>
+      <code>React</code> <code>TypeScript</code> <code>Vite</code> <br>
+      <code>Tailwind CSS</code> <code>Framer Motion</code> <br>
+      <code>Chart.js</code> <code>Gemini API</code>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+## 📂 System Architecture
+
+We keep it clean. Here is how the project is structured for maximum scalability.
+
+```text
+src/
+├── 📂 components/
+│   ├── 🔮 AnimatedHero.tsx   # The landing experience
+│   ├── 📊 BarPieCharts.tsx   # Visual data layer
+│   └── 🗓️ Timetable.tsx      # Logic-driven scheduling
+├── 📂 hooks/
+│   └── 🪝 useGeminiAgent.ts  # The AI pipeline logic
+├── 📂 utils/
+│   └── 📄 pdfParser.ts       # OCR & Text extraction
+└── 📄 App.tsx                # Main entry
+```
+Here is a "Bento Grid" / Visual Style README.
+
+Why is this unique? Most READMEs are just vertical lists of text. This version uses HTML Tables to create a "Grid Layout" directly in GitHub. It looks like a modern product landing page (like Apple or Linear.app) rather than a boring text document.
+
+✅ Copy the code block below
+(Paste this into your README.md file)
+
+HTML
+
+<div align="center">
+  <br />
+    <a href="https://github.com/your-username/smart-study-assistant">
+    <img src="https://img.shields.io/badge/Gemini%202.0-Flash-8E75B2?style=for-the-badge&logo=google%20gemini&logoColor=white" alt="Gemini">
+    <img src="https://img.shields.io/badge/React-v18-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
+  </a>
+  <br />
+  <br />
+
+  <h1 align="center" style="font-size: 3rem; font-weight: 900;">⚡ Smart Study Assistant</h1>
+  
+  <p align="center" style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+    <b>The "Second Brain" for Students.</b><br>
+    An Agentic AI pipeline that transforms chaos into structure. <br>
+    Upload raw notes. Get a perfect study plan.
+  </p>
+
+  <br />
+</div>
+
+## 🍱 What's Inside?
+
+<table>
+  <tr>
+    <td width="60%" valign="top">
+      <h3>🤖 Agentic Reasoning</h3>
+      <p>Unlike basic wrappers, this uses a <b>multi-step agentic pipeline</b>. It reads your PDF, understands the semantic structure, and decides which topics need deep summaries vs. quick bullet points.</p>
+      <br>
+      <img src="https://img.shields.io/badge/Powered_By-Gemini_Flash-purple" />
+    </td>
+    <td width="40%" valign="top">
+      <h3>📊 Visual Analytics</h3>
+      <p>Stop guessing your progress.</p>
+      <ul>
+        <li><b>Bar Charts:</b> Topic frequency analysis.</li>
+        <li><b>Pie Charts:</b> Difficulty distribution (Easy/Med/Hard).</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="40%" valign="top">
+      <h3>📅 Dynamic Timetables</h3>
+      <p>The AI calculates your exam date proximity and generates a <b>slot-based JSON schedule</b> rendered into a beautiful React grid.</p>
+    </td>
+    <td width="60%" valign="top">
+      <h3>⚡ The Tech Stack</h3>
+      <br>
+      <code>React</code> <code>TypeScript</code> <code>Vite</code> <br>
+      <code>Tailwind CSS</code> <code>Framer Motion</code> <br>
+      <code>Chart.js</code> <code>Gemini API</code>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+## 📂 System Architecture
+
+We keep it clean. Here is how the project is structured for maximum scalability.
+
+```text
+src/
+├── 📂 components/
+│   ├── 🔮 AnimatedHero.tsx   # The landing experience
+│   ├── 📊 BarPieCharts.tsx   # Visual data layer
+│   └── 🗓️ Timetable.tsx      # Logic-driven scheduling
+├── 📂 hooks/
+│   └── 🪝 useGeminiAgent.ts  # The AI pipeline logic
+├── 📂 utils/
+│   └── 📄 pdfParser.ts       # OCR & Text extraction
+└── 📄 App.tsx                # Main entry
+```
+🚀 ##Ignition
+Get the engine running in 3 steps.
+
+<div align="left">
+
+1. Clone
+git clone [https://github.com/your-username/smart-study-assistant.git](https://github.com/your-username/smart-study-assistant.git)
+
+2. Fuel Up (Env) Create a .env file. Paste your Gemini Key.
+VITE_GEMINI_API_KEY=AIzaSy...
+
+3. Launch
+npm install && npm run dev
+</div>
+
+<hr /> <p align="center"> <a href="https://twitter.com/your_handle">Twitter</a> • <a href="https://www.google.com/search?q=https://linkedin.com/in/your_handle">LinkedIn</a> • <a href="#">Documentation</a> </p> <p align="center"> <sub>Built with 🖤 and ☕ by [Your Name]</sub> </p>
