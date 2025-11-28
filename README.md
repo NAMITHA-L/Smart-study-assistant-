@@ -25,7 +25,6 @@
 
 <div align="center">
   <a href="https://your-demo-link.com">
-    <img src="https://github.com/user-assets/your-repo/preview-demo.gif" alt="Animated Demo of the Smart Study Assistant Interface" width="100%" />
   </a>
   
   <br>
@@ -34,8 +33,6 @@
     The interface is built with React and Tailwind to ensure a seamless, ultra-responsive study experience across all devices.
   </p>
   
-  <img src="https://github.com/user-assets/your-repo/chart-ss.png" alt="Screenshot of Bar and Pie Charts" width="48%" style="margin-right: 2%; border: 1px solid #ddd; border-radius: 8px;"/>
-  <img src="https://github.com/user-assets/your-repo/timetable-ss.png" alt="Screenshot of Dynamic Timetable" width="48%" style="border: 1px solid #ddd; border-radius: 8px;"/>
 </div>
 
 ---
@@ -99,16 +96,28 @@ src/
 Get the engine running in 3 steps.
 
 ## 1.Clone the Repository
+
 git clone [https://github.com/your-username/smart-study-assistant.git](https://github.com/your-username/smart-study-assistant.git)
 cd smart-study-assistant
 
+
+
+
 ## 2.Fuel Up (Environment) Create a .env.local file in the root directory and paste your Gemini Key:
+
 VITE_GEMINI_API_KEY=AIzaSy...
 
+
+
+
 ## 3.Launch the Dev Server
+
 npm install
 npm run dev
 Your app runs at: http://localhost:3000
+
+
+
 
 ## 🤝 Contributing
 
@@ -121,4 +130,4 @@ We welcome contributions! If you have ideas for new features, improvements, or b
 5.  **Open a Pull Request**.
 
 ---
-<p align="center"> <hr /> <sub>Built with 🖤 and ☕ by ## NAMITHA.L </sub> </p>
+<p align="center"><sub>Built with 🖤 and ☕ by # NAMITHA.L </sub> </p>
