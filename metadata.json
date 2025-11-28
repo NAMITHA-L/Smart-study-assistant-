@@ -1,0 +1,5 @@
+{
+  "name": "Smart Study Assistant",
+  "description": "An AI-powered study companion that transforms textbook chapters into comprehensive study guides, quizzes, and summaries using Gemini 2.5 Flash.",
+  "requestFramePermissions": []
+}
