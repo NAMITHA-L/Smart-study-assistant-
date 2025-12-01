@@ -85,10 +85,10 @@ export const InputForm: React.FC<InputFormProps> = ({ onSubmit, isLoading }) => 
   return (
     <div className="max-w-3xl mx-auto py-8 px-4 sm:px-6">
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl mb-4">
+        <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl mb-4" style={{ fontFamily: "MV Boli" }}>
           Your Personal Study Agent
         </h2>
-        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+        <p className="text-lg text-slate-600 max-w-2xl mx-auto" style={{ fontFamily: "Times New Roman", lineheight:"20%" }}>
           Upload your textbooks, notes, or slides (PDF, Images, Text). 
           Our Agent extracts the content and builds a complete study system for you.
         </p>

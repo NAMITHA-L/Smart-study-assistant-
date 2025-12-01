@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, GraduationCap } from 'lucide-react';
+import { Bold, BoldIcon, BookOpen, GraduationCap } from 'lucide-react';
 
 export const Header: React.FC = () => {
   return (
@@ -10,12 +10,12 @@ export const Header: React.FC = () => {
             <GraduationCap className="w-6 h-6 text-white" />
           </div>
           <h1 className="text-xl font-bold text-slate-900 tracking-tight">
-            Smart Study <span className="text-indigo-600">Assistant</span>
+            Smart Study <span className="text-indigo-600" style={{ fontFamily: "MV Boli" , font: Bold }}>Assistant</span>
           </h1>
         </div>
         <div className="flex items-center space-x-2 text-sm text-slate-500">
           <BookOpen className="w-4 h-4" />
-          <span className="hidden sm:inline">Powered by Gemini 2.5 Flash</span>
+          <span className="hidden sm:inline" style={{ fontFamily: "MV Boli" }}>Simply your agentic friend</span>
         </div>
       </div>
     </header>
