@@ -1,261 +1,133 @@
+
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+  <a href="#ignition">
+    <img src="https://img.shields.io/badge/Status-Actively%20Developed-blue?style=for-the-badge&logo=github" alt="Development Status"/>
+  </a>
+  <a href="https://github.com/your-username/smart-study-assistant">
+    <img src="https://img.shields.io/badge/AI%20Core-Gemini%20Flash-8E75B2?style=for-the-badge&logo=google%20gemini&logoColor=white" alt="Gemini Core">
+    <img src="https://img.shields.io/badge/Built%20With-React%20%2B%20Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
+  </a>
 </div>
 
-# 🌟 Smart Study Assistant — AI-Powered Exam Prep (Agentic AI)
+<br>
 
-> Convert textbooks, slides and notes into summaries, MCQs, and Q&A automatically — powered by an agentic pipeline + Gemini 2.0 Flash.
+<h1 align="center" style="font-size: 3rem; font-weight: 900;">⚡ The Smart Study Assistant</h1>
 
----
-
-<p align="center">
-  <a href="#-overview">Overview</a> •
-  <a href="#-features">Features</a> •
-  <a href="#-demo">Demo</a> •
-  <a href="#-components">Components (Charts & Timetable)</a> •
-  <a href="#-run-locally">Run Locally</a> •
-  <a href="#-contributing">Contributing</a>
-</p>
+<div align="center">
+  <blockquote style="border-left: 5px solid #4F46E5; padding: 10px 20px; margin: 15px auto; max-width: 700px; text-align: left; background-color: #F8F8FF;">
+    <b>🧠 Second Brain Project:</b> Transform chaotic notes (PDFs, PPTs, Images) into perfectly structured study plans, personalized MCQs, and visual analytics using a robust <b>Agentic AI</b> architecture. Stop memorizing, start understanding.
+  </blockquote>
+</div>
 
 ---
 
-## ✨ Overview
-Smart Study Assistant ingests PDF / PPT / DOCX / TXT / images → cleans & extracts text → chunk/embeds → calls Gemini (agent) → outputs structured JSON: `summary`, `mcqs`, `short_answers`, `formulas`. This repo contains the frontend (React + Vite + TypeScript) and sample components for charts, animations and a timetable UI.
+## 👁️ Visual Dashboard & Live Preview
+
+<div align="center">
+  <a href="https://your-demo-link.com">
+  </a>
+  
+  <br>
+
+  <p>
+    The interface is built with React and Tailwind to ensure a seamless, ultra-responsive study experience across all devices.
+  </p>
+  
+</div>
 
 ---
 
-## 🎯 Features
-- File upload (PDF, PPTX, DOCX, images)
-- OCR + normalization pipeline (pre & post)
-- Agentic chunk processing + Gemini 2.0 Flash calls
-- Structured JSON outputs
-- Modern UI with subtle animations
-- Charts (bar + pie) for analytics
-- Interactive timetable generator / view
-- Exportable to PDF / CSV
+## 🍱 Core Feature Breakdown
+
+<table>
+  <tr>
+    <td width="60%" valign="top">
+      <h3>🤖 Agentic Reasoning Pipeline</h3>
+      <p>The core intelligence. It utilizes a **multi-step chaining approach** (Chunking → RAG → Reasoning) to ensure contextual accuracy and generate high-quality, testable output based *only* on your provided documents.</p>
+      <br>
+      <img src="https://img.shields.io/badge/Output-Structured%20JSON-3091B2" />
+      <img src="https://img.shields.io/badge/Process-RAG%20Enabled-000000" />
+    </td>
+    <td width="40%" valign="top">
+      <h3>📊 Data Visualization (Charts)</h3>
+      <p>Instant feedback loops for mastery tracking:</p>
+      <ul>
+        <li>**Bar Charts:** Tracks question density per topic.</li>
+        <li>**Pie Charts:** Visualizes generated question difficulty distribution (Easy/Medium/Hard).</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="40%" valign="top">
+      <h3>📅 Dynamic Scheduler UI</h3>
+      <p>Generates a **slot-based study JSON schedule** (Topic, Time, Day) based on your input material and deadlines, which is then rendered beautifully via a custom React grid component.</p>
+    </td>
+    <td width="60%" valign="top">
+      <h3>🎨 Modern Stack Details</h3>
+      <p>Built for performance and developer experience:</p>
+      <code>React (v18)</code> <code>TypeScript</code> <code>Vite</code> <br>
+      <code>Tailwind CSS (Utility-First)</code> <code>Framer Motion (for smooth transitions)</code> <br>
+      <code>Chart.js</code> <code>Google Gemini API</code>
+    </td>
+  </tr>
+</table>
+
+<br>
 
 ---
 
-## 🎛️ Demo & Live App
-View your app in AI Studio:  
-https://ai.studio/apps/drive/1_MXio3Rng0yzlbmzEYftP9j1JQzmqwH2
+## 📂 Project Structure Map
 
----
+We keep it clean. Here is how the project is structured for maximum scalability.
 
-## 📦 Included Example Components
-This repository includes example React components you can integrate into your app:
+```text
+src/
+├── 📂 components/
+│   ├── 🔮 AnimatedHero.tsx    # The landing experience (Framer Motion)
+│   ├── 📊 BarPieCharts.tsx    # Visual data layer (Chart.js)
+│   └── 🗓️ Timetable.tsx       # Logic-driven scheduling grid
+├── 📂 hooks/
+│   └── 🪝 useGeminiAgent.ts   # The AI orchestration and pipeline logic
+├── 📂 utils/
+│   └── 📄 pdfParser.ts        # OCR & Text extraction helper
+└── 📄 App.tsx                 # Main application entry point
+```
+🚀 Ignition (Quick Start)
+Get the engine running in 3 steps.
 
-- `AnimatedHero.tsx` — Animated header with microinteraction
-- `BarPieCharts.tsx` — Bar + Pie charts (react-chartjs-2)
-- `Timetable.tsx` — Responsive study-timetable UI
-- `SampleStyles.css` — small CSS for micro animations (works with Tailwind too)
+## 1.Clone the Repository
 
----
-
-## ⚙️ Tech stack
-- React + TypeScript + Vite
-- Tailwind CSS (optional)
-- react-chartjs-2 + chart.js
-- Google Gemini (Generative API) — calls from backend or directly via secure proxy
-
----
-
-## 🔧 Install & Run (local)
-**Prerequisites:** Node.js (LTS)
-
-1. 
-git clone https://github.com/YOUR-USERNAME/smart-study-assistant.git
+git clone [https://github.com/your-username/smart-study-assistant.git](https://github.com/your-username/smart-study-assistant.git)
 cd smart-study-assistant
-Install dependencies:
 
+
+
+
+## 2.Fuel Up (Environment) Create a .env.local file in the root directory and paste your Gemini Key:
+
+VITE_GEMINI_API_KEY=AIzaSy...
+
+
+
+
+## 3.Launch the Dev Server
 
 npm install
-Create .env.local in repo root with:
-
-
-VITE_GEMINI_API_KEY=your_gemini_api_key_here
-Run dev server:
-
-
 npm run dev
-Open http://localhost:5173
-
-📈 Charts & Timetable — Dependencies
-Install chart libs:
+Your app runs at: http://localhost:3000
 
 
-npm install chart.js react-chartjs-2
-If you use Tailwind:
 
 
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-🧩 How to add the example components
-Create src/components/ and paste the example files included in this repo (see below). Then import them into your app (e.g., App.tsx).
+## 🤝 Contributing
 
-🔒 Notes on API keys & security
-Never commit .env.local or your API key to GitHub.
+We welcome contributions! If you have ideas for new features, improvements, or bug fixes, please follow these steps:
 
-For production, call Getty/Google APIs from a secure backend (FastAPI / Express) to keep keys secret.
+1.  **Fork** the repository.
+2.  **Create** a new branch (`git checkout -b feature/your-feature-name`).
+3.  **Commit** your changes (`git commit -m 'feat: Add amazing feature'`).
+4.  **Push** to the branch (`git push origin feature/your-feature-name`).
+5.  **Open a Pull Request**.
 
-🛠️ Contributing
-Fork → create feature/* branch → PR to dev branch.
-
-Follow the code style and add tests for new features.
-
-📜 License
-MIT — See LICENSE.
-
-✅ Ready-made Files (copy these into src/components/)
-AnimatedHero.tsx
-tsx
-Copy code
-import React from "react";
-
-export default function AnimatedHero() {
-  return (
-    <section className="w-full py-12 bg-gradient-to-r from-sky-50 to-white">
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <h1 className="text-4xl font-extrabold mb-3">
-          Smart Study Assistant <span className="text-indigo-600">✨</span>
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Upload notes, slides or textbooks and get instant summaries, MCQs & study plans.
-        </p>
-        <div className="inline-flex gap-3">
-          <button className="px-5 py-3 rounded-lg bg-indigo-600 text-white shadow-md transform hover:-translate-y-1 transition">
-            Upload Document
-          </button>
-          <button className="px-5 py-3 rounded-lg border border-indigo-300 text-indigo-600">
-            Try Demo
-          </button>
-        </div>
-        <div className="mt-8">
-          <div className="inline-flex gap-2 items-center">
-            <div className="h-2 w-24 bg-indigo-200 rounded-full animate-pulse" />
-            <span className="text-sm text-gray-500">Agentic Processing • Chunking • Gemini 2.0 Flash</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-BarPieCharts.tsx
-tsx
-Copy code
-import React from "react";
-import { Bar, Pie } from "react-chartjs-2";
-import {
-  Chart as ChartJS,
-  BarElement,
-  CategoryScale,
-  LinearScale,
-  ArcElement,
-  Tooltip,
-  Legend,
-} from "chart.js";
-
-ChartJS.register(BarElement, CategoryScale, LinearScale, ArcElement, Tooltip, Legend);
-
-export default function BarPieCharts({ mcqStats = { topics: [], counts: [] } }: any) {
-  const barData = {
-    labels: mcqStats.topics.length ? mcqStats.topics : ["Arrays","Trees","Graphs","DP"],
-    datasets: [
-      {
-        label: "Questions per Topic",
-        data: mcqStats.counts.length ? mcqStats.counts : [5, 3, 4, 2],
-        backgroundColor: "rgba(79,70,229,0.8)",
-      },
-    ],
-  };
-
-  const pieData = {
-    labels: ["Easy", "Medium", "Hard"],
-    datasets: [
-      {
-        data: [50, 35, 15],
-        backgroundColor: ["#60A5FA", "#7C3AED", "#F97316"],
-      },
-    ],
-  };
-
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold mb-2">Questions by Topic</h3>
-        <Bar data={barData} />
-      </div>
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold mb-2">Difficulty Distribution</h3>
-        <Pie data={pieData} />
-      </div>
-    </div>
-  );
-}
-Timetable.tsx
-tsx
-Copy code
-import React from "react";
-
-type Slot = { day: string; time: string; topic: string };
-
-const defaultSlots: Slot[] = [
-  { day: "Mon", time: "6-7pm", topic: "Arrays" },
-  { day: "Tue", time: "6-7pm", topic: "Graphs" },
-  { day: "Wed", time: "6-7pm", topic: "DP" },
-  { day: "Thu", time: "6-7pm", topic: "Trees" },
-];
-
-export default function Timetable({ slots = defaultSlots }: { slots?: Slot[] }) {
-  return (
-    <div className="p-6 bg-white rounded shadow">
-      <h3 className="text-lg font-semibold mb-4">Study Timetable</h3>
-      <div className="grid grid-cols-4 gap-3">
-        {slots.map((s, i) => (
-          <div key={i} className="p-3 border rounded-lg hover:shadow-lg transition">
-            <div className="font-medium">{s.day}</div>
-            <div className="text-sm text-gray-500">{s.time}</div>
-            <div className="mt-2 text-indigo-600 font-semibold">{s.topic}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-SampleStyles.css
-css
-Copy code
-/* small non-intrusive animations, works with Tailwind or plain CSS */
-@keyframes float {
-  0% { transform: translateY(0px) }
-  50% { transform: translateY(-6px) }
-  100% { transform: translateY(0px) }
-}
-.hero-float { animation: float 3s ease-in-out infinite; }
-.card-hover { transition: transform .18s ease, box-shadow .18s ease; }
-.card-hover:hover { transform: translateY(-4px) scale(1.008); box-shadow: 0 8px 24px rgba(12,12,12,0.08); }
-✅ Final notes
-The banner is included at the top of this README. If you prefer not to use an image, simply remove the <div align="center">...</div> block.
-
-After you paste files into src/components, import them in App.tsx:
-
-tsx
-Copy code
-import React from "react";
-import AnimatedHero from "./components/AnimatedHero";
-import BarPieCharts from "./components/BarPieCharts";
-import Timetable from "./components/Timetable";
-import "./SampleStyles.css";
-
-export default function App() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <AnimatedHero />
-      <main className="max-w-6xl mx-auto py-8">
-        <BarPieCharts />
-        <div className="my-6" />
-        <Timetable />
-      </main>
-    </div>
-  );
-}
+---
+<p align="center"><sub>Built with 🖤 and ☕ by # NAMITHA.L </sub> </p>
