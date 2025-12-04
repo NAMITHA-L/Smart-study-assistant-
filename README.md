@@ -75,7 +75,23 @@
 <br>
 
 ---
+# Looks of the project
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/276e5c5c-8c39-4668-a8a4-ff946ae65a2e" width="32%"/>
+  <img src="https://github.com/user-attachments/assets/719d00f3-e3ec-4f25-92c3-e8f1a100f8e7" width="32%"/>
+  <img src="https://github.com/user-attachments/assets/4cb6ee6d-272a-4d73-a424-5da2382347e1" width="32%"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ea0b1afa-4e34-49b9-a612-7e6f2343d707" width="32%"/>
+  <img src="https://github.com/user-attachments/assets/4479404b-4e45-499e-967f-b1c093aa459a" width="32%"/>
+  <img src="https://github.com/user-attachments/assets/6668b877-26a5-4252-966f-03cb7b1c129f" width="32%"/>
+</p>
+
+
+
+---
 ## 📂 Project Structure Map
 
 We keep it clean. Here is how the project is structured for maximum scalability.
