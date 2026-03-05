@@ -113,7 +113,7 @@ Get the engine running in 3 steps.
 
 ## 1.Clone the Repository
 
-git clone [https://github.com/your-username/smart-study-assistant.git](https://github.com/your-username/smart-study-assistant.git)
+git clone [https://github.com/your-username/smart-study-assistant.git](https://github.com/NAMITHA-L/Smart-study-assistant-)
 cd smart-study-assistant
 
 
